@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="joke-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-app">
+            <div class="header">
+                <h1>😂 Random Joke Generator</h1>
+                <p>Get your daily dose of laughter!</p>
+            </div>
+
+            <div class="joke-container">
+                <div id="jokeDisplay" class="joke-display">
+                    <p>Click the button to load a joke...</p>
+                </div>
+                <div id="jokeType" class="joke-type"></div>
+            </div>
+
+            <div class="button-group">
+                <button id="newJokeBtn" class="btn btn-primary">Get New Joke</button>
+                <button id="copyBtn" class="btn btn-secondary">Copy Joke</button>
+                <button id="shareBtn" class="btn btn-secondary">Share</button>
+            </div>
+
+            <div class="category-selector">
+                <label for="categorySelect">Choose Category:</label>
+                <select id="categorySelect">
+                    <option value="any">Any</option>
+                    <option value="general">General</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock-Knock</option>
+                </select>
+            </div>
+
+            <div class="joke-history">
+                <h3>Joke History</h3>
+                <ul id="historyList" class="history-list"></ul>
+                <button id="clearHistoryBtn" class="btn btn-clear">Clear History</button>
+            </div>
+
+            <div id="loadingSpinner" class="loading-spinner hidden">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="notification" class="notification hidden"></div>
+        </div>
+    </div>
+
+    <script src="joke-script.js"></script>
+</body>
+</html>
